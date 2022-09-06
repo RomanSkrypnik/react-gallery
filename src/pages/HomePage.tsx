@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useAppDispatch } from '../hooks';
 import { fetchImages } from '../store/slices/gallery';
 import { useAppSelector } from '../hooks/useAppSelector';
+import { Image } from '../components';
 
 export const HomePage = () => {
 
@@ -16,7 +17,9 @@ export const HomePage = () => {
     return (
         <section className='home'>
             {
-                items.map(({ urls }) => <img src={urls.small} alt='' />)
+                items.map(({ urls, id, description, user: { username } }) =>
+                    <Image description={description} name={username} src={urls.small} id={id} />,
+                )
             }
         </section>
     );

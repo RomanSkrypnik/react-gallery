@@ -4,6 +4,7 @@ export interface GalleryState {
 }
 
 export interface ImageDto {
+    id: string;
     urls: {
         raw: string;
         full: string;
@@ -14,5 +15,6 @@ export interface ImageDto {
     },
     user: {
         username: string;
-    }
+    },
+    description: string | null;
 }

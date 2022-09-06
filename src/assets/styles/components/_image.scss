@@ -1,0 +1,15 @@
+.image {
+
+  &__figcaption {
+    max-height: 85px;
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+  }
+
+  &__figure {
+    position: relative;
+  }
+}
