@@ -18,7 +18,7 @@ export const HomePage = () => {
         <section className='home'>
             {
                 items.map(({ urls, id, description, user: { username } }) =>
-                    <Image description={description} name={username} src={urls.small} id={id} />,
+                    <Image description={description} name={username} src={urls.small} id={id} key={id} />,
                 )
             }
         </section>

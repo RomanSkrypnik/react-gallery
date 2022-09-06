@@ -40,7 +40,7 @@ const gallerySlice = createSlice({
             state.items = payload;
         },
 
-        setItem(state, { payload }: PayloadAction<ImageDto>) {
+        setItem(state, { payload }: PayloadAction<ImageDto | null>) {
             state.item = payload;
         },
 

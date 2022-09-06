@@ -1,12 +1,19 @@
 .image {
 
   &__figcaption {
-    max-height: 85px;
+    max-width: 100%;
     color: #ffffff;
     position: absolute;
     bottom: 0;
     left: 0;
     padding: 10px;
+  }
+
+  &__desc {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 10px;
   }
 
   &__figure {
