@@ -1,5 +1,16 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { GalleryState, ImageDto } from '../../ts';
+
+export const fetchImages = createAsyncThunk(
+    'gallery/fetchImages',
+    async (_, { dispatch }) => {
+        try {
+
+        } catch (e) {
+            throw e;
+        }
+    },
+);
 
 const initialState: GalleryState = {
     items: [],
