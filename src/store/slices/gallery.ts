@@ -1,11 +1,25 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { GalleryState, ImageDto } from '../../ts';
+import { GalleryService } from '../../services';
 
 export const fetchImages = createAsyncThunk(
     'gallery/fetchImages',
     async (_, { dispatch }) => {
         try {
+            const { data } = await GalleryService.getImages();
+            dispatch(setItems(data));
+        } catch (e) {
+            throw e;
+        }
+    },
+);
 
+export const fetchImage = createAsyncThunk(
+    'gallery/fetchImage',
+    async (id: string, { dispatch }) => {
+        try {
+            const { data } = await GalleryService.getImage(id);
+            dispatch(setItem(data));
         } catch (e) {
             throw e;
         }
